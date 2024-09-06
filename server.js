@@ -17,8 +17,8 @@ connectDB();
 // Init Middleware
 app.use(express.json());
 
-// Cross Origin Resource sharing configuration to the server for accepting requests from certain/all origins
-app.use(cors({ origin: process.env.CORS_ORIGIN, credentials: true }));
+// Cross Origin Resource sharing configuration to the server for accepting requests from certain/all origins (now any origin can access the resources)
+app.use(cors());
 
 // Define Routes
 app.use("/api/auth", authRoutes);
