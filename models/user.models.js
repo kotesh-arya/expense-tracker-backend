@@ -5,7 +5,7 @@ import bcrypt from "bcryptjs";
 
 
 const UserSchema = new mongoose.Schema({
-  name: {
+  username: {
     type: String,
     required: true,
   },
