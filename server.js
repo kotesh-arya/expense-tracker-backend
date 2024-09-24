@@ -5,7 +5,8 @@ import authRoutes from "./routes/auth.js";
 import transactionRoutes from "./routes/transaction.js";
 import budgetRoutes from "./routes/budget.js";
 import savingsGoalRoutes from "./routes/savingsGoal.js";
-import reportsRoutes from './routes/reports.js';
+import reportsRoutes from "./routes/reports.js";
+import userDetailsRoutes from "./routes/currentUser.js";
 import cors from "cors";
 
 dotenv.config();
@@ -26,7 +27,8 @@ app.use("/api/auth", authRoutes);
 app.use("/api/transactions", transactionRoutes);
 app.use("/api/budgets", budgetRoutes);
 app.use("/api/savings-goals", savingsGoalRoutes);
-app.use('/api/reports', reportsRoutes);
+app.use("/api/reports", reportsRoutes);
+app.use("/api/me", userDetailsRoutes);
 
 const PORT = process.env.PORT || 5000;
 
